@@ -28,5 +28,9 @@ while game_is_on:
         scoreboard.track_level()
         player.reset_position()
 
+    if player.distance(car_manager) < 20:
+        game_is_on = False
+        scoreboard.game_over()
+
 
 screen.exitonclick()
